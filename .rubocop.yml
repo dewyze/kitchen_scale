@@ -1,0 +1,137 @@
+require:
+  - rubocop-performance
+  - rubocop-rspec
+
+AllCops:
+  DisplayCopNames: true
+  Exclude:
+    - bin/*
+    - vendor/**/*
+    - db/*
+    - Gemfile.lock
+    - node_modules/**/*
+    - package.json
+    - yarn.lock
+
+Layout/CommentIndentation:
+  Enabled: false
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 110
+  Exclude:
+    - "config/environments/*"
+    - "config/initializers/backtrace_silencers.rb"
+    - "config/initializers/content_security_policy.rb"
+    - "config/initializers/devise.rb"
+    - "db/*"
+    - Rakefile
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/StructNewOverride:
+  Enabled: true
+
+Metrics/AbcSize:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Metrics/MethodLength:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - bin/bundle
+
+Performance/TimesMap:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Enabled: false
+
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+
+RSpec/MultipleExpectations:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 4
+
+RSpec/NotToNot:
+  EnforcedStyle: to_not
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - "app/controllers/users/*" # Devise
+
+Style/Documentation:
+  Enabled: false
+
+Style/ExpandPathArguments:
+  Enabled: false
+
+Style/ExponentialNotation:
+  Enabled: true
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/ModuleFunction:
+  EnforcedStyle: extend_self
+
+Style/NegatedIf:
+  Enabled: false
+
+Style/NumericLiterals:
+  Exclude:
+    - "db/*"
+
+Style/RedundantBegin:
+  Exclude:
+    - "bin/yarn"
+
+Style/SlicingWithRange:
+  Enabled: true
+
+Style/StderrPuts:
+  Exclude:
+    - "bin/yarn"
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
