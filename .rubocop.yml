@@ -23,7 +23,7 @@ Layout/MultilineMethodCallIndentation:
   Enabled: false
 
 Layout/LineLength:
-  Max: 110
+  Max: 120
   Exclude:
     - "config/environments/*"
     - "config/initializers/backtrace_silencers.rb"

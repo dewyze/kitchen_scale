@@ -1,10 +1,8 @@
 require "rspec/core/rake_task"
 require "rubocop/rake_task"
 
-RuboCop::RakeTask.new
-
-Rake::Task["spec"].clear
 RSpec::Core::RakeTask.new(:spec)
+RuboCop::RakeTask.new
 
 desc "Rubocop changed"
 task :rubocop_changed do
